@@ -1,0 +1,628 @@
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology that describes the surveys performed to flight customers." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2> <http://www.w3.org/2000/01/rdf-schema#title> "SurveysPAC2_EX2_dsorianopons" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#title
+<http://www.w3.org/2000/01/rdf-schema#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the customers in the flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#label> "hasCustomer" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "The city of destination of the flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.w3.org/2000/01/rdf-schema#label> "hasDestination" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the flight of the passenger." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> <http://www.w3.org/2000/01/rdf-schema#label> "hasFlight" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasFlightDate" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of birth of the person" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality> <http://www.w3.org/2000/01/rdf-schema#label> "hasNationality" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "City of origin of the flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "hasOrigin" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "The owner of the airline in charge of the flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.w3.org/2000/01/rdf-schema#label> "hasOwner" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the class seat of the passenger" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> <http://www.w3.org/2000/01/rdf-schema#label> "hasSeatClass" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the age of the person" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> <http://www.w3.org/2000/01/rdf-schema#label> "hasAge" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating of the flight for that customer review" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "hasRating" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address> <http://www.w3.org/2000/01/rdf-schema#comment> "Address where the person lives" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Age
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Age> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> <http://www.w3.org/2000/01/rdf-schema#comment> "A company or organisation that his main activity is to provide flights using ariplanes" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> <http://www.w3.org/2000/01/rdf-schema#label> "Airplane Company" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> <http://www.w3.org/2000/01/rdf-schema#comment> "A airplane." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> <http://www.w3.org/2000/01/rdf-schema#label> "Airplane" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Airplane" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet> <http://www.w3.org/2000/01/rdf-schema#comment> "All the airplanes that are owned by the airplane company" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet> <http://www.w3.org/2000/01/rdf-schema#label> "Airplane Fleet" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Class designed for Business Travelers" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#label> "Business Class" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller that has business as their purpouse." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Business Traveller" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A city" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/City" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company> <http://www.w3.org/2000/01/rdf-schema#comment> "A company or organisation" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company> <http://www.w3.org/2000/01/rdf-schema#label> "Company" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent> <http://www.w3.org/2000/01/rdf-schema#comment> "A continent" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent> <http://www.w3.org/2000/01/rdf-schema#label> "Continent" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A country" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Travellers that are travelling as a couple." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Couple Leisure" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "Person that is taking  the flight." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review performed by a customer on a flight service." .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review performed by a customer." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review> <http://www.w3.org/2000/01/rdf-schema#label> "Customer Review" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> <http://www.w3.org/2000/01/rdf-schema#comment> "A date" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Date" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day> <http://www.w3.org/2000/01/rdf-schema#comment> "A day of the month" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day> <http://www.w3.org/2000/01/rdf-schema#label> "Day" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description> <http://www.w3.org/2000/01/rdf-schema#comment> "A description to provide details of the review performed" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description> <http://www.w3.org/2000/01/rdf-schema#label> "Description" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination> <http://www.w3.org/2000/01/rdf-schema#comment> "A city where the airplane is supposed to arrive at the end of the flight." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination> <http://www.w3.org/2000/01/rdf-schema#label> "Destination" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Seats with the lowest price" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#label> "EconomyClass" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Travellers that are travelling with their family." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Family Leisure" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Premium seat class" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass> <http://www.w3.org/2000/01/rdf-schema#label> "FirstClass" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "A flight between two cities" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> <http://www.w3.org/2000/01/rdf-schema#label> "Flight" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of the flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Date" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate> <http://www.w3.org/2000/01/rdf-schema#comment> "A rate to calificate the flight service." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Rate" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A flight service provided" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Service" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller that has leisure as their purpouse." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Leisure Traveller" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month> <http://www.w3.org/2000/01/rdf-schema#comment> "A month of the year" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month> <http://www.w3.org/2000/01/rdf-schema#label> "Month" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of birth of the person" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nationality" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> <http://www.w3.org/2000/01/rdf-schema#comment> "No" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> <http://www.w3.org/2000/01/rdf-schema#label> "No" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin> <http://www.w3.org/2000/01/rdf-schema#comment> "The city from where the airplanes starts its flight." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin> <http://www.w3.org/2000/01/rdf-schema#label> "Origin" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner> <http://www.w3.org/2000/01/rdf-schema#comment> "Company owner of the flight provided." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Economic seats but with some more space" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass> <http://www.w3.org/2000/01/rdf-schema#label> "PremiumEconomyClass" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review performed by a professional." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review> <http://www.w3.org/2000/01/rdf-schema#label> "Professional Review" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether a customer would recommend or not a flight" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> <http://www.w3.org/2000/01/rdf-schema#label> "Recommend" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review performed" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner> <http://www.w3.org/2000/01/rdf-schema#comment> "The owner of the review" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Review Owner" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Class of the seat" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass> <http://www.w3.org/2000/01/rdf-schema#label> "SeatClass" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services> <http://www.w3.org/2000/01/rdf-schema#comment> "All the services that are owned by the airplane ccompany" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services> <http://www.w3.org/2000/01/rdf-schema#label> "Services" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Travellers that are travelling alone." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Solo Leisure" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket> <http://www.w3.org/2000/01/rdf-schema#comment> "Item to be sold to the customers of the flight, that allows the person to use the service." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket> <http://www.w3.org/2000/01/rdf-schema#label> "Ticket" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title> <http://www.w3.org/2000/01/rdf-schema#comment> "A title to summarize the review" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title> <http://www.w3.org/2000/01/rdf-schema#label> "Title" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "Person that is travelling" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "A vehicle" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year> <http://www.w3.org/2000/01/rdf-schema#comment> "A year" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year> <http://www.w3.org/2000/01/rdf-schema#label> "Year" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> <http://www.w3.org/2000/01/rdf-schema#comment> "Yes" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> <http://www.w3.org/2000/01/rdf-schema#label> "Yes" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> <http://www.w3.org/2000/01/rdf-schema#comment> "Not applicable" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> <http://www.w3.org/2000/01/rdf-schema#label> "N/A" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert> <http://www.w3.org/2000/01/rdf-schema#comment> "A person." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert> <http://www.w3.org/2000/01/rdf-schema#label> "Albert" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante> <http://www.w3.org/2000/01/rdf-schema#comment> "A city" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante> <http://www.w3.org/2000/01/rdf-schema#label> "Albacete" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737> <http://www.w3.org/2000/01/rdf-schema#comment> "Airplane Name" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing 737" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge> "28"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> <http://www.w3.org/2000/01/rdf-schema#comment> "A person" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> <http://www.w3.org/2000/01/rdf-schema#label> "David" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta> <http://www.w3.org/2000/01/rdf-schema#comment> "A person" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta> <http://www.w3.org/2000/01/rdf-schema#label> "Marta" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "An airplane company" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair> <http://www.w3.org/2000/01/rdf-schema#label> "Ryanair" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat13B
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat13B> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat13B> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat13B> <http://www.w3.org/2000/01/rdf-schema#comment> "A seat of a airplane" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat13B> <http://www.w3.org/2000/01/rdf-schema#label> "Seat13B" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A> <http://www.w3.org/2000/01/rdf-schema#comment> "A seat of a airplane" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A> <http://www.w3.org/2000/01/rdf-schema#label> "Seat2A" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted> <http://www.w3.org/2000/01/rdf-schema#comment> "A city." .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted> <http://www.w3.org/2000/01/rdf-schema#label> "Standsted" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> <http://www.w3.org/2000/01/rdf-schema#comment> "A date" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> <http://www.w3.org/2000/01/rdf-schema#label> "13-12-2022" .
+# 
+# http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair> .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight Boeing 737 owned by Ryanair, with origin in Albacete and Standsted destination. On 13-12-2022" .
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing737 Albacete-Standsted 13-12-2022" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#FirstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid12 <http://www.w3.org/2003/11/swrl#body> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2003/11/swrl#arguments> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#n> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n> .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid18 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid20 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid12 <http://www.w3.org/2003/11/swrl#head> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid22 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid23 <http://www.w3.org/2003/11/swrl#body> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2003/11/swrl#arguments> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#n> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n> .
+_:genid29 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid31 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/2003/11/swrl#head> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid33 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid5 <http://www.w3.org/2003/11/swrl#body> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#FirstClass> .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid9 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid5 <http://www.w3.org/2003/11/swrl#head> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid11 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

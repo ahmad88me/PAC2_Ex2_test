@@ -1,0 +1,686 @@
+@prefix : <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#> .
+
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2> rdf:type owl:Ontology ;
+                                                             rdfs:comment "An ontology that describes the surveys performed to flight customers." ;
+                                                             rdfs:title "SurveysPAC2_EX2_dsorianopons" ;
+                                                             owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#title
+rdfs:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane
+:hasAirplane rdf:type owl:ObjectProperty ;
+             rdfs:domain :Flight ;
+             rdfs:range :Airplane .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer
+:hasCustomer rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasFlight ;
+             rdfs:domain :Flight ;
+             rdfs:range :Traveller ;
+             rdfs:comment "Indicates the customers in the flight" ;
+             rdfs:label "hasCustomer" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination
+:hasDestination rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Flight ;
+                rdfs:range :City ;
+                rdfs:comment "The city of destination of the flight" ;
+                rdfs:label "hasDestination" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight
+:hasFlight rdf:type owl:ObjectProperty ;
+           rdfs:domain :Customer ;
+           rdfs:range :Flight ;
+           rdfs:comment "Indicates the flight of the passenger." ;
+           rdfs:label "hasFlight" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate
+:hasFlightDate rdf:type owl:ObjectProperty ;
+               rdfs:domain :Flight ;
+               rdfs:range :Date ;
+               rdfs:comment "Date of flight" ;
+               rdfs:label "hasFlightDate" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality
+:hasNationality rdf:type owl:ObjectProperty ;
+                rdfs:domain :Person ;
+                rdfs:range :Country ;
+                rdfs:comment "Country of birth of the person" ;
+                rdfs:label "hasNationality" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Flight ;
+           rdfs:range :City ;
+           rdfs:comment "City of origin of the flight" ;
+           rdfs:label "hasOrigin" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner
+:hasOwner rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Flight ;
+          rdfs:range :Airline_Company ;
+          rdfs:comment "The owner of the airline in charge of the flight" ;
+          rdfs:label "hasOwner" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass
+:hasSeatClass rdf:type owl:ObjectProperty ;
+              rdfs:domain :Customer_Flight_Review ;
+              rdfs:range :SeatClass ;
+              rdfs:comment "Indicates the class seat of the passenger" ;
+              rdfs:label "hasSeatClass" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge
+:hasAge rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdf:type owl:FunctionalProperty ;
+        rdfs:domain :Person ;
+        rdfs:range xsd:integer ;
+        rdfs:comment "Indicates the age of the person" ;
+        rdfs:label "hasAge" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating
+:hasRating rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Customer_Flight_Review ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Rating of the flight for that customer review" ;
+           rdfs:label "hasRating" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf :Person ;
+         rdfs:comment "Address where the person lives" ;
+         rdfs:label "Address" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Age
+:Age rdf:type owl:Class ;
+     rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company
+:Airline_Company rdf:type owl:Class ;
+                 rdfs:subClassOf :Company ;
+                 rdfs:comment "A company or organisation that his main activity is to provide flights using ariplanes" ;
+                 rdfs:label "Airplane Company" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane
+:Airplane rdf:type owl:Class ;
+          rdfs:subClassOf :Vehicle ;
+          rdfs:comment "A airplane." ;
+          rdfs:label "Airplane" ;
+          rdfs:sameAs "https://dbpedia.org/page/Airplane" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet
+:Ariplane_Fleet rdf:type owl:Class ;
+                rdfs:subClassOf :Airline_Company ;
+                rdfs:comment "All the airplanes that are owned by the airplane company" ;
+                rdfs:label "Airplane Fleet" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass
+:BusinessClass rdf:type owl:Class ;
+               rdfs:subClassOf :SeatClass ;
+               rdfs:comment "Class designed for Business Travelers" ;
+               rdfs:label "Business Class" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller
+:Business_Traveller rdf:type owl:Class ;
+                    rdfs:subClassOf :Traveller ;
+                    owl:disjointWith :Leisure_Traveller ;
+                    rdfs:comment "Traveller that has business as their purpouse." ;
+                    rdfs:label "Business Traveller" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Country ;
+      rdfs:comment "A city" ;
+      rdfs:label "City" ;
+      rdfs:sameAs "https://dbpedia.org/page/City" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company
+:Company rdf:type owl:Class ;
+         rdfs:comment "A company or organisation" ;
+         rdfs:label "Company" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent
+:Continent rdf:type owl:Class ;
+           rdfs:comment "A continent" ;
+           rdfs:label "Continent" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Continent ;
+         rdfs:comment "A country" ;
+         rdfs:label "Country" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure
+:Couple_Leisure rdf:type owl:Class ;
+                rdfs:subClassOf :Leisure_Traveller ;
+                owl:disjointWith :Family_Leisure ,
+                                 :Solo_Leisure ;
+                rdfs:comment "Travellers that are travelling as a couple." ;
+                rdfs:label "Couple Leisure" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer
+:Customer rdf:type owl:Class ;
+          rdfs:subClassOf :Flight ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCustomer ;
+                            owl:someValuesFrom :Traveller
+                          ] ;
+          rdfs:comment "Person that is taking  the flight." ;
+          rdfs:label "Customer" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review
+:Customer_Flight_Review rdf:type owl:Class ;
+                        rdfs:subClassOf :Customer_Review ;
+                        rdfs:comment "A review performed by a customer on a flight service." .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review
+:Customer_Review rdf:type owl:Class ;
+                 rdfs:subClassOf :Review ;
+                 owl:disjointWith :Professional_Review ;
+                 rdfs:comment "A review performed by a customer." ;
+                 rdfs:label "Customer Review" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date
+:Date rdf:type owl:Class ;
+      rdfs:comment "A date" ;
+      rdfs:label "Date" ;
+      rdfs:sameAs "https://dbpedia.org/page/Date" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day
+:Day rdf:type owl:Class ;
+     rdfs:subClassOf :Date ;
+     rdfs:comment "A day of the month" ;
+     rdfs:label "Day" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description
+:Description rdf:type owl:Class ;
+             rdfs:subClassOf :Customer_Flight_Review ;
+             rdfs:comment "A description to provide details of the review performed" ;
+             rdfs:label "Description" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination
+:Destination rdf:type owl:Class ;
+             rdfs:subClassOf :Flight ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDestination ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :City
+                             ] ;
+             rdfs:comment "A city where the airplane is supposed to arrive at the end of the flight." ;
+             rdfs:label "Destination" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass
+:EconomyClass rdf:type owl:Class ;
+              rdfs:subClassOf :SeatClass ;
+              rdfs:comment "Seats with the lowest price" ;
+              rdfs:label "EconomyClass" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure
+:Family_Leisure rdf:type owl:Class ;
+                rdfs:subClassOf :Leisure_Traveller ;
+                owl:disjointWith :Solo_Leisure ;
+                rdfs:comment "Travellers that are travelling with their family." ;
+                rdfs:label "Family Leisure" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass
+:FirstClass rdf:type owl:Class ;
+            rdfs:subClassOf :SeatClass ;
+            rdfs:comment "Premium seat class" ;
+            rdfs:label "FirstClass" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:subClassOf :Flight_Service ;
+        rdfs:comment "A flight between two cities" ;
+        rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date
+:Flight_Date rdf:type owl:Class ;
+             rdfs:subClassOf :Flight ;
+             rdfs:comment "Date of the flight" ;
+             rdfs:label "Flight Date" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate
+:Flight_Rate rdf:type owl:Class ;
+             rdfs:subClassOf :Customer_Flight_Review ;
+             rdfs:comment "A rate to calificate the flight service." ;
+             rdfs:label "Flight Rate" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service
+:Flight_Service rdf:type owl:Class ;
+                rdfs:subClassOf :Services ;
+                rdfs:comment "A flight service provided" ;
+                rdfs:label "Flight Service" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller
+:Leisure_Traveller rdf:type owl:Class ;
+                   rdfs:subClassOf :Traveller ;
+                   rdfs:comment "Traveller that has leisure as their purpouse." ;
+                   rdfs:label "Leisure Traveller" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month
+:Month rdf:type owl:Class ;
+       rdfs:subClassOf :Date ;
+       rdfs:comment "A month of the year" ;
+       rdfs:label "Month" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality
+:Nationality rdf:type owl:Class ;
+             rdfs:subClassOf :Person ;
+             rdfs:comment "Country of birth of the person" ;
+             rdfs:label "Nationality" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No
+:No rdf:type owl:Class ;
+    rdfs:subClassOf :Recommend ;
+    owl:disjointWith :Yes ,
+                     <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> ;
+    rdfs:comment "No" ;
+    rdfs:label "No" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin
+:Origin rdf:type owl:Class ;
+        rdfs:subClassOf :Flight ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasOrigin ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :City
+                        ] ;
+        rdfs:comment "The city from where the airplanes starts its flight." ;
+        rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner
+:Owner rdf:type owl:Class ;
+       rdfs:subClassOf :Flight ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasOwner ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Airline_Company
+                       ] ;
+       rdfs:comment "Company owner of the flight provided." ;
+       rdfs:label "Owner" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person
+:Person rdf:type owl:Class ;
+        rdfs:label "Person" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass
+:PremiunEconomyClass rdf:type owl:Class ;
+                     rdfs:subClassOf :SeatClass ;
+                     rdfs:comment "Economic seats but with some more space" ;
+                     rdfs:label "PremiumEconomyClass" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review
+:Professional_Review rdf:type owl:Class ;
+                     rdfs:subClassOf :Review ;
+                     rdfs:comment "A review performed by a professional." ;
+                     rdfs:label "Professional Review" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend
+:Recommend rdf:type owl:Class ;
+           rdfs:subClassOf :Customer_Flight_Review ;
+           rdfs:comment "Whether a customer would recommend or not a flight" ;
+           rdfs:label "Recommend" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review
+:Review rdf:type owl:Class ;
+        rdfs:comment "A review performed" ;
+        rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner
+:Review_Owner rdf:type owl:Class ;
+              rdfs:subClassOf :Customer_Flight_Review ;
+              rdfs:comment "The owner of the review" ;
+              rdfs:label "Review Owner" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass
+:SeatClass rdf:type owl:Class ;
+           rdfs:subClassOf :Customer_Flight_Review ;
+           rdfs:comment "Class of the seat" ;
+           rdfs:label "SeatClass" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services
+:Services rdf:type owl:Class ;
+          rdfs:subClassOf :Airline_Company ;
+          rdfs:comment "All the services that are owned by the airplane ccompany" ;
+          rdfs:label "Services" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure
+:Solo_Leisure rdf:type owl:Class ;
+              rdfs:subClassOf :Leisure_Traveller ;
+              rdfs:comment "Travellers that are travelling alone." ;
+              rdfs:label "Solo Leisure" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket
+:Ticket rdf:type owl:Class ;
+        rdfs:subClassOf :Flight ;
+        rdfs:comment "Item to be sold to the customers of the flight, that allows the person to use the service." ;
+        rdfs:label "Ticket" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title
+:Title rdf:type owl:Class ;
+       rdfs:subClassOf :Customer_Flight_Review ;
+       rdfs:comment "A title to summarize the review" ;
+       rdfs:label "Title" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller
+:Traveller rdf:type owl:Class ;
+           rdfs:subClassOf :Person ;
+           rdfs:comment "Person that is travelling" ;
+           rdfs:label "Traveller" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle
+:Vehicle rdf:type owl:Class ;
+         rdfs:comment "A vehicle" ;
+         rdfs:label "Vehicle" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year
+:Year rdf:type owl:Class ;
+      rdfs:subClassOf :Date ;
+      rdfs:comment "A year" ;
+      rdfs:label "Year" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes
+:Yes rdf:type owl:Class ;
+     rdfs:subClassOf :Recommend ;
+     owl:disjointWith <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> ;
+     rdfs:comment "Yes" ;
+     rdfs:label "Yes" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A> rdf:type owl:Class ;
+                                                                rdfs:subClassOf :Recommend ;
+                                                                rdfs:comment "Not applicable" ;
+                                                                rdfs:label "N/A" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Albert
+:Albert rdf:type owl:NamedIndividual ,
+                 :Person ;
+        :hasFlight <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> ;
+        :hasRating 6 ;
+        rdfs:comment "A person." ;
+        rdfs:label "Albert" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Alicante
+:Alicante rdf:type owl:NamedIndividual ,
+                   :City ;
+          rdfs:comment "A city" ;
+          rdfs:label "Albacete" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing_737
+:Boeing_737 rdf:type owl:NamedIndividual ,
+                     :Airplane ;
+            rdfs:comment "Airplane Name" ;
+            rdfs:label "Boeing 737" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#David
+:David rdf:type owl:NamedIndividual ,
+                :Person ;
+       :hasAge 28 ;
+       :hasRating 7 ;
+       rdfs:comment "A person" ;
+       rdfs:label "David" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Marta
+:Marta rdf:type owl:NamedIndividual ,
+                :Person ;
+       :hasSeatClass :Seat2A ;
+       rdfs:comment "A person" ;
+       rdfs:label "Marta" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ryanair
+:Ryanair rdf:type owl:NamedIndividual ,
+                  :Airline_Company ;
+         rdfs:comment "An airplane company" ;
+         rdfs:label "Ryanair" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat13B
+:Seat13B rdf:type owl:NamedIndividual ,
+                  :EconomyClass ;
+         rdfs:comment "A seat of a airplane" ;
+         rdfs:label "Seat13B" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Seat2A
+:Seat2A rdf:type owl:NamedIndividual ,
+                 :FirstClass ;
+        rdfs:comment "A seat of a airplane" ;
+        rdfs:label "Seat2A" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Standsted
+:Standsted rdf:type owl:NamedIndividual ,
+                    :City ;
+           rdfs:comment "A city." ;
+           rdfs:label "Standsted" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> rdf:type owl:NamedIndividual ,
+                                                                                :Date ;
+                                                                       rdfs:comment "A date" ;
+                                                                       rdfs:label "13-12-2022" .
+
+
+###  http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22
+<http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Boeing737_Albacete_Standsted_13/12/22> rdf:type owl:NamedIndividual ,
+                                                                                                           :Flight ;
+                                                                                                  :hasAirplane :Boeing_737 ;
+                                                                                                  :hasCustomer :David ,
+                                                                                                               :Marta ;
+                                                                                                  :hasDestination :Standsted ;
+                                                                                                  :hasFlightDate <http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#13/12/2022> ;
+                                                                                                  :hasOrigin :Alicante ;
+                                                                                                  :hasOwner :Ryanair ;
+                                                                                                  rdfs:comment "Flight Boeing 737 owned by Ryanair, with origin in Albacete and Standsted destination. On 13-12-2022" ;
+                                                                                                  rdfs:label "Boeing737 Albacete-Standsted 13-12-2022" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#FirstClass> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#n> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#n> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Yes ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#n> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 6 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :No ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSeatClass ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#FirstClass>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Yes ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
