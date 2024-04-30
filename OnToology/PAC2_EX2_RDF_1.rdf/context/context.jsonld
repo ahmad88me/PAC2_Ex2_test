@@ -1,0 +1,219 @@
+{
+  "@context" : {
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI"
+    },
+    "Address" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Address"
+    },
+    "Age" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Age"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Country"
+    },
+    "PremiunEconomyClass" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#PremiunEconomyClass"
+    },
+    "Couple_Leisure" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Couple_Leisure"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Title"
+    },
+    "SeatClass" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#SeatClass"
+    },
+    "Customer" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer"
+    },
+    "hasOwner" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOwner",
+      "@type" : "@id"
+    },
+    "hasDestination" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasDestination",
+      "@type" : "@id"
+    },
+    "hasFlightDate" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlightDate",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Business_Traveller" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Business_Traveller"
+    },
+    "Customer_Flight_Review" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Flight_Review"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Destination"
+    },
+    "Solo_Leisure" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Solo_Leisure"
+    },
+    "Flight_Service" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Service"
+    },
+    "Airplane" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airplane"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Origin"
+    },
+    "FirstClass" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#FirstClass"
+    },
+    "Nationality" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Nationality"
+    },
+    "Person" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Person"
+    },
+    "Services" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Services"
+    },
+    "Date" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Date"
+    },
+    "Traveller" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Traveller"
+    },
+    "hasAge" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Ticket" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ticket"
+    },
+    "hasNationality" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasNationality",
+      "@type" : "@id"
+    },
+    "Leisure_Traveller" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Leisure_Traveller"
+    },
+    "hasFlight" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasFlight",
+      "@type" : "@id"
+    },
+    "Description" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Description"
+    },
+    "hasAirplane" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasAirplane",
+      "@type" : "@id"
+    },
+    "Company" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Company"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#vann:preferredNamespacePrefix"
+    },
+    "hasCustomer" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasCustomer",
+      "@type" : "@id"
+    },
+    "hasSeatClass" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasSeatClass",
+      "@type" : "@id"
+    },
+    "Review_Owner" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Review_Owner"
+    },
+    "title" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#title"
+    },
+    "Customer_Review" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Customer_Review"
+    },
+    "Owner" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Owner"
+    },
+    "Year" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Year"
+    },
+    "Ariplane_Fleet" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Ariplane_Fleet"
+    },
+    "Continent" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Continent"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight"
+    },
+    "Airline_Company" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Airline_Company"
+    },
+    "Family_Leisure" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Family_Leisure"
+    },
+    "A" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#City"
+    },
+    "Flight_Rate" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Rate"
+    },
+    "EconomyClass" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#EconomyClass"
+    },
+    "hasOrigin" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#hasOrigin",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Yes" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Yes"
+    },
+    "BusinessClass" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#BusinessClass"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports"
+    },
+    "Flight_Date" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Flight_Date"
+    },
+    "Professional_Review" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Professional_Review"
+    },
+    "Vehicle" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Vehicle"
+    },
+    "Month" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Month"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#vann:preferredNamespaceUri"
+    },
+    "Day" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Day"
+    },
+    "No" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#No"
+    },
+    "Recommend" : {
+      "@id" : "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#Recommend"
+    }
+  }
+}
