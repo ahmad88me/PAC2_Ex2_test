@@ -1,0 +1,48 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "PAC2_2:Date" "PAC2_2:Solo_Leisure" "PAC2_2:Airline_Company" "PAC2_2:Continent" "PAC2_2:Address" "PAC2_2:Age" "PAC2_2:Description" "PAC2_2:Airplane" "http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A" "PAC2_2:Year" "PAC2_2:Leisure_Traveller" "PAC2_2:Professional_Review" "PAC2_2:Review" "PAC2_2:Destination" "PAC2_2:BusinessClass" "PAC2_2:Ariplane_Fleet" "PAC2_2:Ticket" "PAC2_2:Couple_Leisure" "PAC2_2:Person" "PAC2_2:SeatClass" "PAC2_2:Business_Traveller" "PAC2_2:Day" "PAC2_2:Vehicle" "PAC2_2:Company" "PAC2_2:Flight" "PAC2_2:Traveller" "PAC2_2:Customer_Review" "PAC2_2:Flight_Service" "PAC2_2:FirstClass" "PAC2_2:Yes" "PAC2_2:PremiunEconomyClass" "PAC2_2:Nationality" "PAC2_2:Flight_Date" "PAC2_2:Country" "PAC2_2:Recommend" "PAC2_2:City" "PAC2_2:Month" "PAC2_2:Services" "PAC2_2:Flight_Rate" "PAC2_2:Title" "PAC2_2:Review_Owner" "PAC2_2:EconomyClass" "PAC2_2:Customer" "PAC2_2:Origin" "PAC2_2:Customer_Flight_Review" "PAC2_2:Family_Leisure" "PAC2_2:Owner" "PAC2_2:No" ; /*classes style*/
+	"PAC2_2:Couple_Leisure" -> "PAC2_2:Leisure_Traveller" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Flight_Service" -> "PAC2_2:Services" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Flight" -> "PAC2_2:Flight_Service" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Ticket" -> "PAC2_2:Flight" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Owner" -> "PAC2_2:Flight" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Flight_Rate" -> "PAC2_2:Customer_Flight_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Yes" -> "PAC2_2:Recommend" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Traveller" -> "PAC2_2:Person" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Services" -> "PAC2_2:Airline_Company" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:BusinessClass" -> "PAC2_2:SeatClass" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Airline_Company" -> "PAC2_2:Company" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Title" -> "PAC2_2:Customer_Flight_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Flight_Date" -> "PAC2_2:Flight" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Recommend" -> "PAC2_2:Customer_Flight_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Origin" -> "PAC2_2:Flight" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Customer" -> "PAC2_2:Flight" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Country" -> "PAC2_2:Continent" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:FirstClass" -> "PAC2_2:SeatClass" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:PremiunEconomyClass" -> "PAC2_2:SeatClass" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Business_Traveller" -> "PAC2_2:Traveller" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:City" -> "PAC2_2:Country" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Leisure_Traveller" -> "PAC2_2:Traveller" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Nationality" -> "PAC2_2:Person" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Professional_Review" -> "PAC2_2:Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Family_Leisure" -> "PAC2_2:Leisure_Traveller" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Description" -> "PAC2_2:Customer_Flight_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:No" -> "PAC2_2:Recommend" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Year" -> "PAC2_2:Date" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Customer_Review" -> "PAC2_2:Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Airplane" -> "PAC2_2:Vehicle" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Age" -> "PAC2_2:Person" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Address" -> "PAC2_2:Person" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Solo_Leisure" -> "PAC2_2:Leisure_Traveller" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Day" -> "PAC2_2:Date" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Month" -> "PAC2_2:Date" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Destination" -> "PAC2_2:Flight" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Review_Owner" -> "PAC2_2:Customer_Flight_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:EconomyClass" -> "PAC2_2:SeatClass" [ label = "rdfs:subClassOf" ];
+	"http://www.semanticweb.org/dani2/ontologies/2024/3/PAC2_2#N/A" -> "PAC2_2:Recommend" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:SeatClass" -> "PAC2_2:Customer_Flight_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Customer_Flight_Review" -> "PAC2_2:Customer_Review" [ label = "rdfs:subClassOf" ];
+	"PAC2_2:Ariplane_Fleet" -> "PAC2_2:Airline_Company" [ label = "rdfs:subClassOf" ];
+
+}
